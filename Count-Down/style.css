@@ -1,0 +1,66 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main container styling */
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url('/Count-Down/1802071.webp') no-repeat center center/cover;
+}
+
+/* Overlay to darken background and center content */
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Title styling */
+.title {
+    margin-top: 10px;
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Column container for countdown elements */
+.column {
+    margin-top: 50px;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Styling for each countdown unit */
+.column div {
+    width: 250px;
+    text-align: center;
+}
+
+/* Input field styling */
+input {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
