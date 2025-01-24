@@ -1,66 +1,144 @@
-/* Reset default margin, padding, and box-sizing */
+/* Reset default styles */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
-/* Main container styling */
+/* Navigation styling */
+nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+/* Main container */
 .main {
     width: 100%;
     height: 100vh;
     background: url('/Count_Down_Web/1802071.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* Prevents overlap with fixed nav */
 }
 
-/* Overlay to darken background and center content */
+/* Overlay for dimming effect */
 .overlay {
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
 }
 
 /* Title styling */
 .title {
-    margin-top: 10px;
     color: white;
-    font-size: 2.5rem;
-    text-align: center;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* Column container for countdown elements */
-.column {
-    margin-top: 50px;
-    width: 1000px;
+/* Subtitle (date) */
+.subtitle {
+    color: #f4a261;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+/* Countdown timer */
+.countdown {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    color: white;
-    font-family: "Montserrat", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Styling for each countdown unit */
-.column div {
-    width: 250px;
-    text-align: center;
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100px;
 }
 
-/* Input field styling */
-input {
-    width: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
+.time-box input {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
     border: none;
-    border-radius: 5px;
-    height: 50px;
+    border-radius: 10px;
     text-align: center;
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
+    color: #333;
+}
+
+.time-box span {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .time-box {
+        width: 80px;
+    }
+
+    .time-box input {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
 }

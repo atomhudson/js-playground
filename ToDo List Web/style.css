@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Giga", serif;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #ea4217;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 800px;
+    min-height: 500px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+}
+#item{
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    display: block;
+    box-shadow: 0px 0px 2px grey;
+    
+}
+#to-do-box{
+    margin-top: 20px;
+    list-style: none;
+}
+#to-do-box li{
+
+}
