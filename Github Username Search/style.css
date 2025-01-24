@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2a2a72 0%, #2e2a68 74%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    color: white;
+}
+
+/* Search Input */
+input {
+    background: #4c2885;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 1rem;
+    padding: 15px;
+    width: 400px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Card Styling */
+.card {
+    background: linear-gradient(135deg, #4c2885 0%, #4c11ac 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Avatar */
+.avatar {
+    border: 5px solid #2a2a72;
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+/* User Info */
+.user-info {
+    color: #fff;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.user-info h2 {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.user-info p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Stats */
+.info {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px 0;
+    max-width: 400px;
+}
+
+.info li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.info li strong {
+    font-size: 1rem;
+    margin-left: 5px;
+    color: #ffcc00;
+}
+
+/* Repositories */
+#repos {
+    margin-top: 10px;
+}
+
+.repo {
+    background: #ffcc00;
+    border-radius: 5px;
+    color: black;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.repo:hover {
+    background: #ffa500;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
