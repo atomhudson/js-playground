@@ -1,39 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lexend Giga", serif;
+    font-family: "Lexend Giga", sans-serif;
 }
-main{
-    width: 100%;
-    height: 100vh;
-    display: flex;
+
+body {
     background-color: #ea4217;
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
-.box{
-    width: 800px;
-    min-height: 500px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-}
-#item{
-    padding: 10px;
-    font-size: 20px;
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    border: 0;
-    outline: 0;
-    display: block;
-    box-shadow: 0px 0px 2px grey;
-    
 }
-#to-do-box{
+
+.box {
+    width: 600px;
+    min-height: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#item {
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#item:focus {
+    border-color: #ea4217;
+    box-shadow: 0px 0px 5px rgba(234, 66, 23, 0.5);
+}
+
+/* To-Do List Styling */
+#to-do-box {
     margin-top: 20px;
     list-style: none;
 }
-#to-do-box li{
 
+.task {
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task:hover {
+    background: #f0f0f0;
+}
+
+.task span {
+    flex: 1;
+    padding-left: 10px;
+    color: #333;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Completed Task */
+.done {
+    text-decoration: line-through;
+    color: #555;
+    background-color: #e0e0e0;
 }
