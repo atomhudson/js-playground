@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box {
+    min-width: 400px;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #34495e, #2c3e50);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+}
+
+#pass-box {
+    width: 100%;
+    display: block;
+    background-color: white;
+    font-size: 28px;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+label {
+    user-select: none;
+}
+
+#btn {
+    width: 100%;
+    font-size: 22px;
+    border: none;
+    padding: 12px;
+    background: linear-gradient(to right, #ff8c00, #ff6b6b);
+    color: white;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#btn:hover {
+    background: linear-gradient(to right, #ff6b6b, #ff8c00);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+}
